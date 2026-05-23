@@ -1,0 +1,87 @@
+name: Bug Report 🦀
+description: File a bug report for an AI agent to parse and reproduce.
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a bug report! Please fill out the sections below with as much detail as possible to help our AI and human maintainers debug the issue quickly.
+  
+  - type: input
+    id: rustc-version
+    attributes:
+      label: Rustc Version
+      description: Run `rustc --version` in your terminal and paste the output.
+      placeholder: rustc 1.78.0 (9cb0df954 2024-04-29)
+    validations:
+      required: true
+
+  - type: input
+    id: crate-version
+    attributes:
+      label: Crate/Package Version
+      description: What version of our crate or binary are you using?
+      placeholder: 0.1.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What platform is this issue occurring on?
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other / Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: Symptoms & Expected Behavior
+      description: Describe what you expected to happen and what actually occurred.
+      placeholder: |
+        Expected: The function `process_data` should return `Ok(Result)`.
+        Actual: Panicked with `thread 'main' panicked at 'index out of bounds', src/core.rs:45`
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal Reproducible Example (MRE)
+      description: Provide a minimal, complete block of code that we can drop into `tests/` to reproduce the bug.
+      placeholder: |
+        ```rust
+        fn main() {
+            let data = vec![1, 2, 3];
+            let broken = my_crate::my_function(data, 10);
+            assert_eq!(broken, 42);
+        }
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Backtraces & Output Logs
+      description: If applicable, paste the exact error backtrace (run with `RUST_BACKTRACE=1`).
+      placeholder: |
+        Stack backtrace:
+           0: std::panicking::begin_panic
+           ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Additional Context
+      description: Any other information like related dependencies, feature flags, or custom configurations.
+      placeholder: "Compiled with `cargo build --features 'heavy-compute'`"
+    validations:
+      required: false
