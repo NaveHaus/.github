@@ -1,11 +1,11 @@
-name: Bug Report 🦀
-description: File a bug report for an AI agent to parse and reproduce.
+name: Rust Bug Report 🦀
+description: File a Rust bug report for an AI agent to parse and reproduce.
 labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for submitting a bug report! Please fill out the sections below with as much detail as possible to help our AI and human maintainers debug the issue quickly.
+        Please fill out the sections below with as much detail as possible to help our AI and human maintainers debug the issue quickly.
   
   - type: input
     id: rustc-version
