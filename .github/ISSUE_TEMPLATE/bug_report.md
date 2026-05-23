@@ -1,32 +1,60 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
+name: "Bug report"
+about: "Report a reproducible bug with enough detail for fast diagnosis"
+title: "bug: <short summary>"
+labels: ["bug", "needs-triage"]
+assignees: []
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+AI/Reporter instructions:
+- Prefer concrete, copy/pasteable artifacts over descriptions (commands, logs, config snippets).
+- If unknown, write "Unknown" (don’t guess).
+- If sensitive, redact tokens/cookies/keys/passwords (keep structure, remove values).
+-->
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Summary
+**What is broken?**
+<1–3 sentences. Include the user-visible impact.>
 
+**Severity**
+- [ ] Blocker (prevents core usage)
+- [ ] High (major feature broken, workaround is painful)
+- [ ] Medium (workaround exists)
+- [ ] Low (minor issue)
+
+## Expected vs Actual
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+<What should happen?>
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavior**
+<What happened instead?>
 
-**Desktop (please complete the following information, if relevant):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Reproduction (deterministic)
+**Minimal steps to reproduce**:
 
-**Additional context**
-Add any other context about the problem here.
+1.
+2.
+3.
+
+## Environment
+**Version, Tag, or Commit SHA**:
+
+**OS and Version**:
+
+## Inputs, Configuration, and Context
+**Command(s) run (exact)**:
+```
+<paste exact commands>
+```
+
+**Relevant config (redact secrets)**:
+```
+```
+
+## Analysis (Optional)
+**Suspected cause**:
+
+**What I already tried**:
+
+**Related issues/PRs**:
