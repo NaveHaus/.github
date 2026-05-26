@@ -2,7 +2,7 @@
 name: "Bug report"
 about: "Report a reproducible bug with enough detail for fast diagnosis"
 title: "bug: <short summary>"
-labels: ["bug"]
+type: "Bug"
 assignees: []
 ---
 
